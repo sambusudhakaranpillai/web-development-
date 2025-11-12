@@ -1,0 +1,77 @@
+import tkinter 
+m = Tk()
+w = Label(m,text = "geeksforgeeks,org")
+w.pack()
+m.mainloop()
+
+import tkinter as tk
+r=tk.Tk()
+r.title('counting seconds')
+button = tk.Button(r,text='Stop',width=25,command=r.destroy)
+button.pack()
+r.mainloop()from tkinter import *
+master = Tk()
+Label(master,text='FirstName').grid(row=0)
+Label(master,text='LastName').grid(row=1)
+e1 = Entry(master)
+e2 = Entry(master)
+e1.grid(row=0,column=1)
+e2.grid(row=1,column=1)
+mainloop()
+from tkinter import *
+top = Tk()
+Lb = Listbox(top)
+Lb.insert(1,'python')
+Lb.insert(2,'java')
+Lb.insert(3,'c++')
+Lb.insert(4,'anyother')
+Lb.pack()
+top.mainloop()
+
+import tkinter as tk
+root=tk.Tk()
+root.title("User information")
+root.geometry("400x250")
+root.configure(bg="blue")
+
+
+name_label= tk.Label(root,text='firstname',bg='white').grid(row=0,column=0,padx=5,pady=5)
+name_entry=tk.Entry(root,width=30)
+last_name=tk.Label(root,text='lastname',bg='white').grid(row=1,column=1,padx=5,pady=5)
+last_entry=tk.Entry(root,width=30)
+age = tk.Label(root,text='age',bg='white').grid(row=2,column=2,padx=5,pady=5)
+age_entry=tk.Entry(root,width=30)
+
+
+label = tk.Label(root,text='gender',bg='white',font=("Arial,12"))
+label.grid(row=3,column=0,padx=10,pady=10,sticky="W")
+male_var = tk.IntVar()
+female_var=tk.IntVar()
+male_check=tk.Checkbutton(root,text='male',variable = male_var).grid(row=0,sticky='W')
+female_check=tk.Checkbutton(root,text='female',variable=female_var).grid(row=1,sticky='W')
+
+def submit():
+    print("firstname",e1.get())
+    print("lastname",e2.get())
+    print("age",e3.get())
+    if male_var.get():
+        print("gender:male")
+    elif female_var.get():
+        print("gender:female")
+    else:
+        print("gender not selected")
+submit_but=tk.Button(root,text="submit",command=submit).grid(row=9,column=1,pady=10)
+root.mainloop()
+
+from tkinter import *
+root = Tk()
+v = IntVar()
+Radiobutton(root,text='FM',variable=v,value=1).pack(anchor=W)
+Radiobutton(root,text="MIT",variable=v,value=2).pack(anchor=W)
+mainloop()
+
+
+
+
+
+
