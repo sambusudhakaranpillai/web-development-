@@ -1,0 +1,67 @@
+index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive style sheet</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div class="login-container">
+            <h2>login</h2>
+            <form>
+                <input type="text" placeholder="enter username " required><br>
+                <input type="text" placeholder="enter password " required><br>
+                <button type="submit">login</button>
+
+            </form>
+        </div>
+    </body>
+</html>
+
+STYLE.CSS
+body {
+            display: flex;
+            justify-content: center;     
+            align-items: center;         
+            height: 100vh;              
+            background-color: #cdd4dd;
+            margin: 0;
+        }
+
+.form-container {
+      background-color: rgb(117, 119, 238);
+      padding: 30px;
+      width: 350px;
+       border-radius: 10px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;           
+            padding: 10px;         
+            margin-bottom: 15px;
+            border: 1px solid #e7e2e2;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            width: 100%;
+            background-color: #0066cc;
+            color: rgb(28, 3, 111);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h2 {
+            text-align: center;
+        }
+    form{
+      text-align:center;
+      background-color:rgb(95, 195, 202);
+      padding:50px;
+      width:350px;
+      height:100px;
+      border-radius:10px;
+
+    }
