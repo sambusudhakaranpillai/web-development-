@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Article</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        color: #333;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
+    /* Layout */
+    .container {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /* Article */
+    .article {
+        flex: 3;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .article img {
+        width: 100%;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    .article h2 {
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .article p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        flex: 1;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        height: fit-content;
+    }
+
+    .sidebar h3 {
+        margin-top: 0;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Travel Stories & Adventures</h1>
+</header>
+
+<div class="container">
+
+    <!-- Article Section -->
+    <div class="article">
+        <h2>The Hidden Beauties of Kerala</h2>
+        <p class="meta">By John Doe &nbsp;|&nbsp; January 12, 2025</p>
+
+        <img src="c:\Users\Admin\Desktop\kerala-hidden-gems.avif">
+
+        <p>
+            Kerala, often called “God’s Own Country,” is a land of breathtaking landscapes,
+            serene backwaters, lush green hills, and rich cultural heritage. Hidden between
+            the Arabian Sea and the Western Ghats, Kerala offers natural wonders that captivate
+            every traveler who steps into its peaceful embrace.
+        </p>
+
+        <p>
+            One of the most enchanting attractions of Kerala is its tranquil backwaters.
+            Floating slowly on a traditional houseboat, you can witness life in its
+            simplest form—coconut trees swaying in the wind, fishermen casting their nets,
+            and villages living in harmony with nature.
+        </p>
+
+        <p>
+            The hill stations like Munnar and Wayanad offer a completely different charm.
+            Rolling tea plantations, cool breezes, mist-covered mountains, and scenic viewpoints
+            make these places perfect for nature lovers and photographers seeking peaceful escapes.
+        </p>
+
+        <p>
+            Beyond natural beauty, Kerala is also known for its vibrant culture. From colorful
+            festivals like Onam to traditional dance forms like Kathakali, every corner of Kerala
+            reflects a deep connection to art, tradition, and community.
+        </p>
+
+        <p>
+            Whether you're exploring untouched beaches, trekking through forest trails,
+            or enjoying the aroma of spices, Kerala is a destination that stays in your memory
+            forever. Truly, its hidden beauties wait to be discovered by every traveler.
+        </p>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li>Travel Tips</li>
+            <li>Destinations</li>
+            <li>Culture & Traditions</li>
+            <li>Photography</li>
+            <li>Adventure</li>
+        </ul>
+
+        <h3 style="margin-top: 30px;">Recent Posts</h3>
+        <ul>
+            <li>The Magic of Goa Beaches</li>
+            <li>Exploring North-East India</li>
+            <li>A Guide to Solo Traveling</li>
+            <li>Top 5 Hill Stations of India</li>
+        </ul>
+    </aside>
+
+</div>
+
+</body>
+</html>
