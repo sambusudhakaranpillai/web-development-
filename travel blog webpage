@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wander With Me</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+    }
+
+    
+    header {
+        background: #0e3c57;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    /* Navigation Bar */
+    nav {
+        background: #144b6c;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Featured Image */
+    .featured {
+        width: 100%;
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .featured img {
+        width: 100%;
+        display: block;
+    }
+
+    /* Places Section */
+    .places-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .places-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .place {
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        width: 300px;
+        padding-bottom: 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .place img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .place h3 {
+        margin: 15px 0 10px;
+    }
+
+    .place p {
+        padding: 0 15px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        nav a {
+            margin: 0 10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .place {
+            width: 90%;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Wander With Me</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Places</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- Featured Image -->
+<div class="featured">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=60" alt="Featured Travel Image">
+</div>
+
+<!-- Places Section -->
+<section class="places-section">
+    <h2>Explore Beautiful Places</h2>
+
+    <div class="places-container">
+
+        <!-- Place 1 -->
+        <div class="place">
+            <img src=c:\Users\Admin\Desktop\photo-1602216056096-3b40cc0c9944.jfif>
+            <h3>kerala, India</h3>
+            <p>Experience stunning backwaters and peaceful tropical vibes in kerala.</p>
+        </div>
+
+        <!-- Place 2 -->
+        <div class="place">
+            <img src=c:\Users\Admin\Desktop\images.jfif>
+            <h3>Manali,India</h3>
+            <p>Majestic mountains, serene nature</p>
+        </div>
+
+        <!-- Place 3 -->
+        <div class="place">
+            <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=800&q=60" alt="City">
+            <h3>Tokyo, Japan</h3>
+            <p>A perfect blend of tradition and technology, offering an unforgettable urban adventure.</p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
