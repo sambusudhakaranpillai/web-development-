@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3-Step CSS Form</title>
+
+  <!-- Link CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form>
+  <!-- Hidden Radio Buttons (Step Controls) -->
+  <input type="radio" name="steps" id="step1" checked>
+  <input type="radio" name="steps" id="step2">
+  <input type="radio" name="steps" id="step3">
+
+  <!-- Step Indicators -->
+  <div class="indicators">
+    <label for="step1"></label>
+    <label for="step2"></label>
+    <label for="step3"></label>
+  </div>
+
+  <!-- Steps Container -->
+  <div class="steps">
+
+    <!-- Step 1 -->
+    <div class="step step1">
+      <h2>Personal Details</h2>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number">
+
+      <div class="nav-buttons">
+        <span></span>
+        <label for="step2">Next →</label>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step step2">
+      <h2>Address Information</h2>
+      <input type="text" placeholder="Street Address" required>
+      <input type="text" placeholder="City" required>
+      <input type="text" placeholder="Postal Code" required>
+      <input type="text" placeholder="Country" required>
+
+      <div class="nav-buttons">
+        <label for="step1">← Back</label>
+        <label for="step3">Next →</label>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step step3">
+      <h2>Review & Submit</h2>
+      <p>Please review the details before submitting.</p>
+      <p>(CSS-only: values can’t be auto-filled here.)</p>
+
+      <div class="nav-buttons">
+        <label for="step2">← Back</label>
+      </div>
+
+      <button type="submit">Submit Form</button>
+    </div>
+
+  </div>
+</form>
+
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* ---------- Hidden Radio Buttons ---------- */
+input[type="radio"] {
+  display: none;
+}
+
+/* Step container */
+.steps {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+/* Step panels */
+.step {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.5s ease;
+}
+
+/* Show active step */
+#step1:checked ~ .steps .step1,
+#step2:checked ~ .steps .step2,
+#step3:checked ~ .steps .step3 {
+  left: 0;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons label,
+button {
+  padding: 12px 20px;
+  background: #4e73df;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.nav-buttons label:hover,
+button:hover {
+  background: #2e59d9;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ---------- Step Indicators (Dots) ---------- */
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.indicators label {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#step1:checked ~ .indicators label[for="step1"],
+#step2:checked ~ .indicators label[for="step2"],
+#step3:checked ~ .indicators label[for="step3"] {
+  background: #4e73df;
+  transform: scale(1.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .nav-buttons {
+    flex-direction: column;
+  }
+  .nav-buttons label {
+    margin: 5px 0;
+  }
+}
